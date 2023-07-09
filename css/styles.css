@@ -70,7 +70,7 @@ a:focus {
     /* No underlining when hover over a link*/
     text-decoration: none;
     transition: transform 0.25s;
-    transform: scale(1.1);
+    transform: scale(1.1, 1.1);
 }
 
 a:active {
@@ -231,15 +231,15 @@ html {
 }
 
 .about {
-float: center;
+display: block;
 max-width: 500px;
 margin: auto;
+text-align: center;
 }
 
 ul {
     list-style: none;
 }
-
 
 @media all and (max-width: 500px) {
     .grid {
