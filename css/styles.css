@@ -162,7 +162,7 @@ html {
 
 .page-header__logo {
     margin-left: auto;
-}
+    }
 
 .navigation-list {
     list-style-type: none;
@@ -246,12 +246,12 @@ ul {
       grid-template-columns: 1fr;
     }
   }
-  @media all and (min-width: 500px) and (max-width: 1400px){
+  @media all and (min-width: 500px) and (max-width: 1600px){
     .grid {
       grid-template-columns: 1fr 1fr;
     }
   }
-  @media all and (max-width: 1400px) {
+  @media all and (max-width: 1600px) {
     .grid {
       grid-gap: 10px;
     }
@@ -267,16 +267,33 @@ ul {
     
 
    .Baltimore {
-    transform: scale(3,3);
-    transform: translate(400px,200px);
-    animation: rotation 2s infinite linear;
+    animation-name: baltimorescale;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
 }
 
-@keyframes rotation {
+@keyframes baltimorescale {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes fadeIn  {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
     }
+}
+
+.crab {
+    animation: fadeIn ease-in infinite alternate;
 }
